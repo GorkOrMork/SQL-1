@@ -34,9 +34,12 @@ and amount > 10;
 Получите последние пять аренд фильмов.
 
 select *
+
 from rental
+
 order by  rental_date desc
 limit 5
+
 
 ![image](https://github.com/GorkOrMork/SQL-1/assets/109193124/e803abf1-4fba-4221-9a58-f77dfb08116f)
 
@@ -49,6 +52,14 @@ limit 5
 
 все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
 замените буквы 'll' в именах на 'pp'.
+
+select replace(lower( first_name), 'll', 'pp') nam, replace(lower( last_name), 'll', 'pp') , active
+
+from customer 
+
+where (first_name = 'Kelly' or first_name = 'Willie') and active = 1
+
+order by nam
 
 ![image](https://github.com/GorkOrMork/SQL-1/assets/109193124/c8f819d5-3343-4065-9d1e-c4eb70550f5f)
 
